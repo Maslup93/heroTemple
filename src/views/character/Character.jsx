@@ -5,19 +5,22 @@ import './character.css'
 const Character = ({name,image,gender,race,alignment}) => {
   return (
     <div >
-      <Card >
-        <Card.Img variant="top" src={image}/>
+      <Card bg="dark" text="white" className="charGrid">
+        <Card.Img variant="top" src={image} className="img"/>
         <Card.Body>
-          <Card.Title>{name}</Card.Title>
-          <Card.Text>
+          <Card.Title className="text">{name}</Card.Title>
+          <Card.Text className="text">
             Gender: {gender}
             <br/>
             Race: {race}
             <br/>
             Alignment: {alignment}
           </Card.Text>
-          <Button variant="primary">More Info</Button>
-          <Button variant="primary">Add Character</Button>
+          <div className="button">
+          <Button >More Info</Button>
+          <Button >Add Character</Button>
+          </div>
+          
         </Card.Body>
       </Card>
     </div>
