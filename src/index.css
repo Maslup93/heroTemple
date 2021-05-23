@@ -5,23 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(61, 1, 1);
-  background: -moz-radial-gradient(
-    circle,
-    rgba(61, 1, 1, 1) 0%,
-    rgba(61, 7, 7, 1) 100%
-  );
-  background: -webkit-radial-gradient(
-    circle,
-    rgba(61, 1, 1, 1) 0%,
-    rgba(61, 7, 7, 1) 100%
-  );
-  background: radial-gradient(
-    circle,
-    rgba(61, 1, 1, 1) 0%,
-    rgba(61, 7, 7, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3d0101",endColorstr="#3d0707",GradientType=1);
+  background: rgb(68,65,65);
+background: -moz-linear-gradient(180deg, rgba(68,65,65,1) 0%, rgba(0,0,0,1) 100%);
+background: -webkit-linear-gradient(180deg, rgba(68,65,65,1) 0%, rgba(0,0,0,1) 100%);
+background: linear-gradient(180deg, rgba(68,65,65,1) 0%, rgba(0,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#444141",endColorstr="#000000",GradientType=1);
 }
 
 code {

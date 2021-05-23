@@ -1,0 +1,8 @@
+.charGrid{
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 10px;
+    width:18rem; 
+}

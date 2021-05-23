@@ -1,7 +1,0 @@
-.navbar{
-    background: rgb(77,40,1);
-background: -moz-radial-gradient(circle, rgba(77,40,1,1) 0%, rgba(92,23,3,1) 100%);
-background: -webkit-radial-gradient(circle, rgba(77,40,1,1) 0%, rgba(92,23,3,1) 100%);
-background: radial-gradient(circle, rgba(77,40,1,1) 0%, rgba(92,23,3,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4d2801",endColorstr="#5c1703",GradientType=1);
-}

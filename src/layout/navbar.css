@@ -1,0 +1,22 @@
+.navbar{
+   
+    background: rgb(54,54,54);
+background: -moz-linear-gradient(0deg, rgba(54,54,54,0.9472163865546218) 0%, rgba(255,0,0,1) 26%, rgba(255,140,73,1) 39%, rgba(255,255,255,1) 47%, rgba(255,140,73,1) 56%, rgba(168,0,0,1) 81%, rgba(57,57,57,0.9612219887955182) 100%);
+background: -webkit-linear-gradient(0deg, rgba(54,54,54,0.9472163865546218) 0%, rgba(255,0,0,1) 26%, rgba(255,140,73,1) 39%, rgba(255,255,255,1) 47%, rgba(255,140,73,1) 56%, rgba(168,0,0,1) 81%, rgba(57,57,57,0.9612219887955182) 100%);
+background: linear-gradient(0deg, rgba(54,54,54,0.9472163865546218) 0%, rgba(255,0,0,1) 26%, rgba(255,140,73,1) 39%, rgba(255,255,255,1) 47%, rgba(255,140,73,1) 56%, rgba(168,0,0,1) 81%, rgba(57,57,57,0.9612219887955182) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#363636",endColorstr="#393939",GradientType=1);
+}
+
+.position {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+   }
+
+
+.container{
+    padding-top: 20px;
+}
+.links{
+    text-shadow: 2px 2px 11px black;
+}
