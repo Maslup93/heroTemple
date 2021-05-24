@@ -13,27 +13,48 @@ const CharacterPage = () => {
 
   return (
     <div>
-      
-        <Search getQuery={setQuery}  />
-     
-      
-      <Container >
+      <Search getQuery={setQuery} />
+
+      <Container>
         <Row>
           {data.map((item) => {
             return (
-              <div >
+              <div>
                 <Character
                   name={item.name}
+                  intelligence={item.powerstats.intelligence}
+                  strength={item.powerstats.strength}
+                  speed={item.powerstats.speed}
+                  durability={item.powerstats.durability}
+                  power={item.powerstats.power}
+                  combat={item.powerstats.combat}
                   image={item.image.url}
                   gender={item.appearance.gender}
                   race={item.appearance.race}
+                  height={item.appearance.height}
+                  weight={item.appearance.weight}
+                  eyeColor={item.appearance.eyecolor}
+                  hairColor={item.appearance.haircolor}
+                  occupation={item.work.occupation}
+                  base={item.work.base}
+                  group={item.connections.groupaffiliation}
+                  relatives={item.connections.relatives}
                   alignment={item.biography.alignment}
+                  fullName={item.biography.full}
+                  alterEgos={item.biography.alteregos}
+                  aliases={item.biography.aliases}
+                  placeOfBirth={item.biography.placeofbirth}
+                  firstApp={item.biography.firstappearance}
+                  publisher={item.biography.publisher}
+                  
+
+
                 />
               </div>
             );
           })}
         </Row>
-      </Container> 
+      </Container>
     </div>
   );
 };

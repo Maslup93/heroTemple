@@ -1,28 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, Button } from "react-bootstrap";
-import './character.css'
+import MoreInfo from "./charInfo/MoreInfo";
+import "./character.css";
 
-const Character = ({name,image,gender,race,alignment}) => {
+const Character = (props) => {
+  const [modalShow, setModalShow] = useState(false);
+
   return (
-    <div >
+    <div>
       <Card bg="dark" text="white" className="charGrid">
-        <Card.Img variant="top" src={image} className="img"/>
+        <Card.Img variant="top" src={props.image} className="img" />
         <Card.Body>
-          <Card.Title className="text">{name}</Card.Title>
-          <Card.Text className="text">
-            Gender: {gender}
-            <br/>
-            Race: {race}
-            <br/>
-            Alignment: {alignment}
-          </Card.Text>
-          <div className="button">
-          <Button >More Info</Button>
-          <Button >Add Character</Button>
+          <div className="textContainer">
+            <Card.Text className="text">
+              <h4>{props.name}</h4>
+              Gender: {props.gender}
+              <br />
+              Race: {props.race}
+              <br />
+              Alignment: {props.alignment}
+            </Card.Text>
+            <Button onClick={() => setModalShow(true)}>More Info</Button>
+            <Button>Add Character</Button>
           </div>
-          
         </Card.Body>
       </Card>
+      <MoreInfo
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+        charPhoto={props.image}
+        charName={props.name}
+        charAlignment={props.alignment}
+        charRace={props.race}
+        charIntelligence={props.intelligence}
+        charPower={props.power}
+        charCombat={props.combat}
+        charSpeed={props.speed}
+        charDurability={props.durability}
+        charStrength={props.strength}
+        charHeight={props.height}
+        charWeight={props.weight}
+        charEyeColor={props.color}
+        charHairColor={props.haircolor}
+        charOccupation={props.occupation}
+        charBase={props.base}
+        charGroup={props.groupaffiliation}
+        charRelatives={props.relatives}
+        charFullName={props.fullname}
+        charAlterEgos={props.alteregos}
+        charAliases={props.aliases}
+        charPlaceOfBirth={props.p}
+        charFirstApp={props.firstappearance}
+        charPublisher={props.publisher}
+      />
     </div>
   );
 };

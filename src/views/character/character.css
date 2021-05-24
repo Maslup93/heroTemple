@@ -5,6 +5,7 @@
     width:18rem; 
     border: 5px outset;
     box-shadow: 3px 10px 20px rgba(255, 72, 0, 0.815);
+    border-bottom: 30px;
 }
 
 
@@ -22,4 +23,13 @@
     border-radius: 10px;
     border: 5px inset ;
 }
-
+.text{
+    display:flex;
+    flex-direction: column;
+}
+.textContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+}

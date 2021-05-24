@@ -1,6 +1,6 @@
 import React from 'react';
 import HomePage from './views/home/HomePage';
-import CharSheet from './views/character/CharSheet';
+
 import AboutPage from './views/about/AboutPage';
 import CharacterPage from './views/character/CharacterPage';
 import NavBar from './layout/NavBar';
@@ -22,11 +22,7 @@ const App = () => {
         </Route>
         <Route path="/search">
           <CharacterPage />
-        </Route>
-        <Route path="/moreinfo">
-          <CharSheet />
-        </Route>
-        <Route>
+       
           <AboutPage/>
         </Route>
       </Switch>

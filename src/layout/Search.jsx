@@ -15,8 +15,8 @@ const Search = ({ getQuery }) => {
   };
 
   return (
-    <div >
-      <InputGroup className="search">
+    <div  >
+      <InputGroup >
         <FormControl
           placeholder="Character's Name"
           value={text}

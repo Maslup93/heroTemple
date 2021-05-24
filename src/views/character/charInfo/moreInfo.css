@@ -1,0 +1,21 @@
+.moreInfo{
+    display: flex;
+
+    background-image: url('../../../layout/wall.png');
+    border: 2px outset ;
+}
+
+.charPhoto{
+    display: flex;
+    width:10rem;
+    border: 3px inset ;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+}
+
+.modalContainer{
+    display: flex;
+    flex-direction: row;
+}
