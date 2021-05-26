@@ -7,12 +7,15 @@ const Character = (props) => {
   const [modalShow, setModalShow] = useState(false);
 
   return (
-    <div>
+    <div className="cardContainer">
       <Card bg="dark" text="white" className="charGrid">
-        <Card.Img variant="top" src={props.image} className="img" />
+        <div className="imgContainer">
+          <Card.Img variant="top" src={props.image} className="cardImg" />
+        </div>
+        
         <Card.Body>
           <div className="textContainer">
-            <Card.Text className="text">
+            <Card.Text className="cardText">
               <h4>{props.name}</h4>
               Gender: {props.gender}
               <br />
@@ -20,8 +23,11 @@ const Character = (props) => {
               <br />
               Alignment: {props.alignment}
             </Card.Text>
-            <Button onClick={() => setModalShow(true)}>More Info</Button>
-            <Button>Add Character</Button>
+            <div className="buttonsContainer">
+            <Button className="button" onClick={() => setModalShow(true)}>More Info</Button>
+            <Button className="button">Add Character</Button>
+            </div>
+            
           </div>
         </Card.Body>
       </Card>

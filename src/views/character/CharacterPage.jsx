@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Search from "../../layout/Search";
 import useGet from "../../utils/useGet";
 import Character from "./Character";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import "./character.css";
 
 const CharacterPage = () => {
@@ -33,18 +33,18 @@ const CharacterPage = () => {
                   race={item.appearance.race}
                   height={item.appearance.height}
                   weight={item.appearance.weight}
-                  eyeColor={item.appearance.eyecolor}
-                  hairColor={item.appearance.haircolor}
+                  eyeColor={item.appearance["eye-color"]}
+                  hairColor={item.appearance["hair-color"]}
                   occupation={item.work.occupation}
                   base={item.work.base}
-                  group={item.connections.groupaffiliation}
+                  group={item.connections["group-affiliation"]}
                   relatives={item.connections.relatives}
                   alignment={item.biography.alignment}
-                  fullName={item.biography.full}
-                  alterEgos={item.biography.alteregos}
+                  fullName={item.biography["full-name"]}
+                  alterEgos={item.biography["alter-egos"]}
                   aliases={item.biography.aliases}
-                  placeOfBirth={item.biography.placeofbirth}
-                  firstApp={item.biography.firstappearance}
+                  placeOfBirth={item.biography["place-of-birth"]}
+                  firstApp={item.biography["first-appearance"]}
                   publisher={item.biography.publisher}
                   
 

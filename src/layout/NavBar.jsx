@@ -1,20 +1,19 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
+import temple from '../layout/temple.png'
 import "./navbar.css";
 
 const NavBar = () => {
   return (
     <Navbar className="position">
-      <Navbar.Brand href="/home">
-        Hero
+      <Navbar.Brand href="/home" >
+        
         <img
+          src={temple}
           alt="temple"
-          src="https://image.flaticon.com/icons/png/512/89/89020.png"
-          width="40"
-          height="40"
-        />{" "}
-        Temple
-      </Navbar.Brand>
+          className="templeImg"
+        />
+       </Navbar.Brand>
 
       <Nav className="links">
         <Nav.Link href="/home">Home</Nav.Link>

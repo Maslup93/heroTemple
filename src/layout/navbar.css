@@ -18,5 +18,13 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#363636",endCo
     padding-top: 20px;
 }
 .links{
-    text-shadow: 2px 2px 11px black;
+    color: black;
+   font-weight: bolder;
+   
+}
+
+.templeImg{
+    display: flex;
+    justify-content: center;
+    width: 100px;
 }

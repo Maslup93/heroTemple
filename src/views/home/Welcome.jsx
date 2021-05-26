@@ -16,8 +16,8 @@ const Welcome = () => {
 
          
           <Carousel.Caption>
-            <h1 className="text">Welcome To Hero Temple!</h1>
-            <h3 className="text">
+            <h1 className="carouselText">Welcome To Hero Temple!</h1>
+            <h3 className="carouselText">
               The place where you'll find heroes from multiple universes
             </h3>
           </Carousel.Caption>
@@ -30,8 +30,8 @@ const Welcome = () => {
           />
 
           <Carousel.Caption>
-            <h1 className="text">Search your favourite heroes</h1>
-            <h3 className="text">
+            <h1 className="carouselText">Search your favourite heroes</h1>
+            <h3 className="carouselText">
               Search heroes by name and learn lots of info about them
             </h3>
           </Carousel.Caption>
@@ -44,8 +44,8 @@ const Welcome = () => {
           />
 
           <Carousel.Caption>
-            <h1 className="text">Select,Build,Compare</h1>
-            <h3 className="text">
+            <h1 className="carouselText">Select,Build,Compare</h1>
+            <h3 className="carouselText">
               Select and build and compare your dream team!
             </h3>
           </Carousel.Caption>

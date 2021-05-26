@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { InputGroup, FormControl, Button } from "react-bootstrap";
-import './search.css'
+import "./search.css";
 
 const Search = ({ getQuery }) => {
   const [text, setText] = useState("");
@@ -15,18 +15,17 @@ const Search = ({ getQuery }) => {
   };
 
   return (
-    <div  >
-      <InputGroup >
+    <div className="searchContainer">
+      <InputGroup className="search">
         <FormControl
           placeholder="Character's Name"
           value={text}
           onChange={onChangeHandler}
         />
-        <InputGroup.Append>
-          <Button onClick={onSubmitHandler} variant="outline-secondary">
-            Button
-          </Button>
-        </InputGroup.Append>
+        <InputGroup.Append></InputGroup.Append>{" "}
+        <Button onClick={onSubmitHandler} variant="outline-secondary">
+          Search
+        </Button>
       </InputGroup>
     </div>
   );

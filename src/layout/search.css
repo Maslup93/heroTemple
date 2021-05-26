@@ -1,11 +1,15 @@
 .search{
   display: flex;
   justify-content:center;
-  flex-direction: row;
-  border: 3px outset;
   width:500px;
+  border: 5px outset;
+  border-radius: 10px;
+ 
+}
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-.button{
-  border: 2px inset;
-}

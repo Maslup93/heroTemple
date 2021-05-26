@@ -2,25 +2,19 @@ import React from "react";
 import { Modal, Button, Tabs, Tab, ProgressBar } from "react-bootstrap";
 import "./moreInfo.css";
 
-
 const MoreInfo = (props) => {
   return (
-    <div>
+    <div className="modalContainer">
       <Modal
         {...props}
-        size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
+        <div></div>
         <Modal.Body className="moreInfo">
           <div className="info">
-            <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
-              <Tab eventKey="home" title="Profile">
-                <h4>Name: {props.charName}</h4>
-                <h4>Race: {props.charRace}</h4>
-                <h4>Alignment: {props.charAlignment}</h4>
-              </Tab>
-              <Tab eventKey="profile" title="Power Stats">
+            <Tabs defaultActiveKey="powerStats" id="uncontrolled-tab-example">
+              <Tab eventKey="powerStats" title="Power Stats" className="tabs">
                 <h4>
                   Intelligence:{" "}
                   <ProgressBar
@@ -76,52 +70,42 @@ const MoreInfo = (props) => {
                   />
                 </h4>
               </Tab>
-              <Tab eventKey="bio" title="Biography" >
-                <h4>
-                  Full Name: {props.charFullname}
-                  </h4>
-                  <h4>
-                     Alter Egos: {props.charAlteregos}
-                  </h4>
-                 <h4>
-                   Aliases: {props.charAliases}
-                 </h4>
-                  <h4>
-                     Place Of Birth: {props.charPlaceofbirth}
-                  </h4>
-                 <h4>
-                   First App: {props.charFirstappearance}
-                 </h4>
-                  <h4>
-                    Publisher: {props.charPublisher}
-                  </h4>
-                  
-                  
+              <Tab eventKey="bio" title="Biography" className="tabs">
+                <h4>Full Name: {props.charFullname}</h4>
+                <h4>Alter Egos: {props.charAlteregos}</h4>
+                <h4>Aliases: {props.charAliases}</h4>
+                <h4>Place Of Birth: {props.charPlaceofbirth}</h4>
+                <h4>First App: {props.charFirstappearance}</h4>
+                <h4>Publisher: {props.charPublisher}</h4>
               </Tab>
-              <Tab eventKey="appearance" title="Appearance">
-              <h4></h4>
-              <h4></h4>
-              <h4></h4>
-              <h4></h4>
+              <Tab eventKey="appearance" title="Appearance" className="tabs">
+                <h4></h4>
+                <h4></h4>
+                <h4></h4>
+                <h4></h4>
               </Tab>
-              <Tab eventKey="work" title="Work">
-              <h4></h4>
-              <h4></h4>
-              <h4></h4>
-              <h4></h4>
+              <Tab eventKey="work" title="Work" className="tabs">
+                <h4></h4>
+                <h4></h4>
+                <h4></h4>
+                <h4></h4>
               </Tab>
-              <Tab eventKey="connections" title="Connections">
-              <h4></h4>
-              <h4></h4>
-              <h4></h4>
-              <h4></h4>
+              <Tab eventKey="connections" title="Connections" className="tabs">
+                <h4></h4>
+                <h4></h4>
+                <h4></h4>
+                <h4></h4>
               </Tab>
             </Tabs>
+            <Modal.Footer>
+              <div className="infoButtonContainer">
+                <Button className="button" onClick={props.onHide}>
+                  Close
+                </Button>
+              </div>
+            </Modal.Footer>
           </div>
         </Modal.Body>
-        <Modal.Footer className="moreInfo">
-          <Button onClick={props.onHide}>Close</Button>
-        </Modal.Footer>
       </Modal>
     </div>
   );
