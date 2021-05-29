@@ -36,7 +36,7 @@ const App = () => {
 
   return (
     <Router>
-      {isLogged ? <LoginRoutes /> : <LogoutRoutes login={login} />}
+      {isLogged=== null ? (<LogoutRoutes login={login} />)  : (<LoginRoutes />) }
     </Router>
   );
 };
