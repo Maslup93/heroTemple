@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
+
 import "./loginForm.css";
 import temple from "../../layout/temple.png";
 
@@ -8,6 +9,10 @@ const LoginForm = ({ login }) => {
     email: "",
     password: "",
   });
+
+
+
+
 
   const onChangeHandler = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
@@ -54,7 +59,7 @@ const LoginForm = ({ login }) => {
           />
         </Form.Group>
 
-        <Button className="button" type="submit">
+        <Button className="loginButton" type="submit">
           Enviar
         </Button>
       </Form>

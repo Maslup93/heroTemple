@@ -1,9 +1,9 @@
 import React from "react";
-import { Navbar, Nav } from "react-bootstrap";
+import { Navbar, Nav,Button } from "react-bootstrap";
 import temple from '../layout/temple.png'
 import "./navbar.css";
 
-const NavBar = () => {
+const NavBar = ({logout}) => {
   return (
     <Navbar className="position">
       <Navbar.Brand href="/home" >
@@ -16,10 +16,10 @@ const NavBar = () => {
        </Navbar.Brand>
 
       <Nav className="links">
-        <Nav.Link href="/home">Home</Nav.Link>
-        <Nav.Link href="/search">Search</Nav.Link>
-        <Nav.Link href="/about">About</Nav.Link>
+        <Nav.Link href="/search">About</Nav.Link>
+       <Button onClick={logout} className="navButton"> Logout </Button>
       </Nav>
+      
     </Navbar>
   );
 };
