@@ -3,7 +3,7 @@ import { InputGroup, FormControl, Button } from "react-bootstrap";
 import "./search.css";
 
 const Search = ({ getQuery }) => {
-  const [text, setText] = useState("");
+  const [text, setText] = useState("Chuck");
 
   const onChangeHandler = (e) => {
     setText(e.target.value);

@@ -10,7 +10,7 @@ const Character = (props) => {
     <div >
       <Card bg="dark" text="white" className="charGrid">
         <div className="imgContainer">
-          <Card.Img variant="top" src={props.image} className="cardImg" />
+          <Card.Img variant="top" src={props.image?.url} className="cardImg" />
         </div>
         
         <Card.Body>
@@ -30,30 +30,7 @@ const Character = (props) => {
       <MoreInfo
         show={modalShow}
         onHide={() => setModalShow(false)}
-        charPhoto={props.image}
-        charName={props.name}
-        charAlignment={props.alignment}
-        charRace={props.race}
-        charIntelligence={props.intelligence}
-        charPower={props.power}
-        charCombat={props.combat}
-        charSpeed={props.speed}
-        charDurability={props.durability}
-        charStrength={props.strength}
-        charHeight={props.height}
-        charWeight={props.weight}
-        charEyeColor={props.color}
-        charHairColor={props.haircolor}
-        charOccupation={props.occupation}
-        charBase={props.base}
-        charGroup={props.groupaffiliation}
-        charRelatives={props.relatives}
-        charFullName={props.fullname}
-        charAlterEgos={props.alteregos}
-        charAliases={props.aliases}
-        charPlaceOfBirth={props.p}
-        charFirstApp={props.firstappearance}
-        charPublisher={props.publisher}
+          {...props}
       />
     </div>
   );

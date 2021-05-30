@@ -2,11 +2,39 @@ import React from "react";
 import { Modal, Button, Tabs, Tab, ProgressBar } from "react-bootstrap";
 import "./moreInfo.css";
 
-const MoreInfo = (props) => {
+const powerStatsConfig = [
+  {
+    label: 'Intelligence',
+    dataKey: 'intelligence',
+  },
+  {
+    label: 'Strength',
+    dataKey: 'strength',
+  },
+  {
+    label: 'Speed',
+    dataKey: 'speed',
+  },
+  {
+    label: 'Durability',
+    dataKey: 'durability',
+  },
+  {
+    label: 'Power',
+    dataKey: 'power',
+  },
+  {
+    label: 'Combat',
+    dataKey: 'combat',
+  },
+]
+
+const MoreInfo = ({ onHide, show, ...characterProps}) => {
   return (
     <div className="modalContainer">
       <Modal
-        {...props}
+        onHide={onHide}
+        show={show}
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
@@ -15,68 +43,25 @@ const MoreInfo = (props) => {
           <div className="info">
             <Tabs defaultActiveKey="powerStats" id="uncontrolled-tab-example">
               <Tab eventKey="powerStats" title="Power Stats" className="tabs">
-                <h4>
-                  Intelligence:{" "}
-                  <ProgressBar
-                    animated
-                    variant="danger"
-                    now={props.charIntelligence}
-                    label={props.charIntelligence}
-                  />
-                </h4>
-                <h4>
-                  Strength:{" "}
-                  <ProgressBar
-                    animated
-                    variant="danger"
-                    now={props.charStrength}
-                    label={props.charStrength}
-                  />
-                </h4>
-                <h4>
-                  Speed:
-                  <ProgressBar
-                    animated
-                    variant="danger"
-                    now={props.charSpeed}
-                    label={props.charSpeed}
-                  />
-                </h4>
-                <h4>
-                  Durability:{" "}
-                  <ProgressBar
-                    animated
-                    variant="danger"
-                    now={props.charDurability}
-                    label={props.charDurability}
-                  />
-                </h4>
-                <h4>
-                  Power:
-                  <ProgressBar
-                    animated
-                    variant="danger"
-                    now={props.charPower}
-                    label={props.charPower}
-                  />
-                </h4>
-                <h4>
-                  Combat:
-                  <ProgressBar
-                    animated
-                    variant="danger"
-                    now={props.charCombat}
-                    label={props.charCombat}
-                  />
-                </h4>
+                {powerStatsConfig.map(section => (
+                    <h4 key={section.dataKey}>
+                      {section.label}:{" "}
+                      <ProgressBar
+                          animated
+                          variant="danger"
+                          now={characterProps.powerstats[section.dataKey]}
+                          label={characterProps.powerstats[section.dataKey]}
+                      />
+                    </h4>
+                ))}
               </Tab>
               <Tab eventKey="bio" title="Biography" className="tabs">
-                <h4>Full Name: {props.charFullname}</h4>
-                <h4>Alter Egos: {props.charAlteregos}</h4>
-                <h4>Aliases: {props.charAliases}</h4>
-                <h4>Place Of Birth: {props.charPlaceofbirth}</h4>
-                <h4>First App: {props.charFirstappearance}</h4>
-                <h4>Publisher: {props.charPublisher}</h4>
+                <h4>Full Name: {characterProps.biography['full-name']}</h4>
+                <h4>Alter Egos: {characterProps.biography['alter-egos']}</h4>
+                {/*<h4>Aliases: {characterProps}</h4>*/}
+                <h4>Place Of Birth: {characterProps.biography['place-of-birth']}</h4>
+                <h4>First App: {characterProps.biography['first-appearance']}</h4>
+                <h4>Publisher: {characterProps.biography.publisher}</h4>
               </Tab>
               <Tab eventKey="appearance" title="Appearance" className="tabs">
                 <h4></h4>
@@ -99,7 +84,7 @@ const MoreInfo = (props) => {
             </Tabs>
             <Modal.Footer>
               <div className="infoButtonContainer">
-                <Button className="button" onClick={props.onHide}>
+                <Button className="button" onClick={onHide}>
                   Close
                 </Button>
               </div>
