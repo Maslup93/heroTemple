@@ -1,14 +1,10 @@
 .listContainer{
 display: flex;
 justify-content: center;
-padding-top: 200px;
-
-
 }
 
-.list{
-
+.charListContainer {
     background-image: url('../../../layout/wall.png');
-    width: auto;
     box-shadow: 0.5px 0.5px 20px orangered;
+    margin-bottom: 40px;
 }

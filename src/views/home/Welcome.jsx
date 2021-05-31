@@ -4,7 +4,7 @@ import "./welcome.css";
 
 const Welcome = () => {
   return (
-    <div className="container">
+    <div className="customContainer">
       <Carousel fade className="carousel">
         <Carousel.Item >
           

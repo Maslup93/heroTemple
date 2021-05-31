@@ -12,10 +12,10 @@
   
 }
 
-.container{
+.customContainer{
   display: flex;
   justify-content: center;
-  padding-top: 80px;
+  padding-top: 20px;
   
 }
 
