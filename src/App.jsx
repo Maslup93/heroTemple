@@ -3,6 +3,7 @@ import {
     BrowserRouter as Router,
     Route,
     Switch,
+    Redirect
 
 } from "react-router-dom";
 import HomePage from "./views/home/HomePage";
@@ -18,6 +19,7 @@ const App = () => {
                 <Route
                     path="/home"
                 ><HomePage/></Route>
+                <Redirect to="/login" />
             </Switch>
         </Router>
     );

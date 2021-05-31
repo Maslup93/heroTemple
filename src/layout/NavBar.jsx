@@ -16,7 +16,7 @@ const NavBar = ({logout}) => {
        </Navbar.Brand>
 
       <Nav className="links">
-        <Nav.Link href="/search">About</Nav.Link>
+       
        <Button onClick={logout} className="navButton"> Logout </Button>
       </Nav>
       

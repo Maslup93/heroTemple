@@ -65,8 +65,8 @@ const CharList = ({showInfoModal, selectedChars, removeChar}) => {
                     <Table>
                         <thead>
                         <tr style={{textAlign: 'center'}}>
-                            <th>Name</th>
                             <th>Photo</th>
+                            <th>Name</th>
                             <th>Intelligence</th>
                             <th>Strength</th>
                             <th>Speed</th>
