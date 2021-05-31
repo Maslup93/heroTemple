@@ -4,7 +4,7 @@ import { Form, Button } from "react-bootstrap";
 import "./loginForm.css";
 import temple from "../../layout/temple.png";
 
-const LoginForm = ({ login }) => {
+const LoginForm = ({ login, loading }) => {
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -20,12 +20,8 @@ const LoginForm = ({ login }) => {
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
-    try {
-      login(user.email, user.password);
-      console.log(user)
-    } catch (error) {
-      console.log(error);
-    }
+    login(user.email, user.password);
+    console.log(user)
   };
 
   return (
@@ -44,6 +40,7 @@ const LoginForm = ({ login }) => {
             value={user.email}
             required
             onChange={onChangeHandler}
+            disabled={loading}
           />
         </Form.Group>
 
@@ -56,12 +53,13 @@ const LoginForm = ({ login }) => {
             value={user.password}
             required
             onChange={onChangeHandler}
+            disabled={loading}
           />
         </Form.Group>
-
-        <Button className="loginButton" type="submit">
+        <Button className="loginButton" type="submit" disabled={loading}>
           Enviar
         </Button>
+        {loading && <h5 style={{ textAlign: 'center', marginTop: 10}}>Loading...</h5>}
       </Form>
     </div>
   );

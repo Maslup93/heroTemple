@@ -7,6 +7,7 @@ import './loginPage.css'
 
 const LoginPage = () => {
   const [isLogged, setIsLogged] = useState(!!getToken());
+  const [loading, setLoading] = useState(false);
   const history = useHistory();
 
   useEffect(() => {
@@ -14,17 +15,24 @@ const LoginPage = () => {
   }, [isLogged])
 
   const login = async (email, password) => {
-    const { data } = await Axios.post("http://challenge-react.alkemy.org/", {
+    setLoading(true);
+    await Axios.post("http://challenge-react.alkemy.org/", {
       email,
       password,
+    }).then(({ data }) => {
+      setIsLogged(true);
+      setToken(data.token);
+    }).catch(e => {
+      console.log(e);
+      alert('Invalid credentials');
+    }).finally(() => {
+      setLoading(false);
     });
-    setIsLogged(true);
-    setToken(data.token);
   };
 
   return (
     <div>
-      <LoginForm login={login} />
+      <LoginForm login={login} loading={loading} />
     </div>
   );
 };
