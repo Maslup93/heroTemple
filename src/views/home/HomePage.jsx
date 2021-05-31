@@ -10,7 +10,7 @@ import Search from "../../layout/Search";
 import {deleteToken, getToken} from "../../helpers/auth-helpers";
 import MoreInfo from "../character/charInfo/MoreInfo";
 
-const superheroToken = process.env.REACT_APP_SUPERHERO_TOKEN;
+
 
 const HomePage = () => {
     const isLogged = !!getToken();
@@ -25,7 +25,7 @@ const HomePage = () => {
     const [moreInfoChar, setMoreInfoChar] = useState({});
 
     const [data, loading, error] = useGet({
-        url: `https://www.superheroapi.com/api.php/${superheroToken}/search/${query}`,
+        url: `https://www.superheroapi.com/api.php/1111393692672065/search/${query}`,
     });
 
     const logout = () => {
